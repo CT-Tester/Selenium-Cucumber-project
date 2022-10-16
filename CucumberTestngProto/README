@@ -1,0 +1,75 @@
+Selenium-Cucumber test readme file
+************************
+CONTENTS OF THIS FILE
+---------------------
+
+ *-0. Introduction
+ *-1. Requirements
+ *-2. Recommended modules
+ *-3. Installation
+ *-4. Configuration
+ *-5. Maintainers
+ 
+ -0. Introduction
+ ----------------
+ 
+ This package contains all the necessary files to execute the test project for Selenium - Cucumber. 
+ The tests consists on one test case. The script opens a new browser session, that opens the Google.es page and set "automatización" in the search input control.
+ When Google completes the search, the sript looks for the Spanish Wikipedia entry in the list and opens it. Finally, the script goes to the section "Historia temprana"
+ and takes one screenshot. This screenshot is stored in the Cluecumber html report that you can find in the folder "./target/Test_report".
+ 
+ To see the screenshot go to the last step of the report and click on the link "Toogle".
+ 
+ Finally, this project was initially planned to use Selenium Grid. Due to time constrains and a non-resolved bug, the project was reconverted to Selenium Webdriver.
+ it will be generated a new version of the project with Selenium Grid RemoteDriver for the future.
+ 
+ -IMPORTANT NOTE-: To check how the code works, we recommend to delete the folder "./target/Test_report", BUT I have kept it to demonstrate how the code is working in my machines, 
+ in case that a non expected issue appears in your machine.
+ 
+ -1. Requeriments
+ ----------------
+ All the necessary files are included in the project. 
+ 
+ The project has been developed to use TestNG and Cucumber frameworks in order to have a very flexible configuration between hardware-software settings and test cases.
+ 
+ In addition to that, this Maven project allows to be integrated in a CI/CD environment. The test results are stored in a Cluecumber report that allows the tester 
+ (or other people involved in the project) to check the test results and email it to other people involved in the project.
+ 
+ In case you plan to execute the test in a Windows system, it is mandatory to set the parameter "isDebug"
+ as "Yes" in the file ./src/test/resources/Test_Suites/Test_Cucumber_Report.xml before to execute the tests.
+ 
+ -2. Recommended modules
+ -----------------------
+ In addition to the previous point, we recommend to check if you have installed the following modules before to run the test project:
+ 	-If you are planning to run this test in chrome web browser and windows operative system, it is mandatory to have previously installed the version 106.0.5249.119
+ 	-It is mandatory to install java jdk 1.8.0. After that, we need to set the environment variable JAVA_HOME with the path to the folder where we have installed this java package.
+ 	-In addition to the previous point, we recommend to check the run configuration in your Eclipse IDE and be assured that you are using this Java jdk version.
+ 	-It is mandatory to install the Apache Maven 3.8.6. You can download it in this link: https://maven.apache.org/download.cgi
+ 	 To install Maven you need to follow these instructions: https://maven.apache.org/install.html
+ 	-You need also, to create and set the environment variable M2_HOME with the folder path where you have installed your Maven version.
+ 
+ -3. Installation
+ ----------------
+ To execute this project import it to your IntellIJ Idea or Eclipse development environment tool. Then, you can execute it, doing a right click button on the pom.xml file
+ and selecting the option "Run as/Maven test".
+ 
+ You can also doing a right click on ./src/test/resources/Test_Suites/Test_Report.html and select the option "Run as/TestNG suite".
+ 
+ -4 Configuration
+ ----------------
+ 
+ You can select the browser and operative system where you want to run the tests. To do that, edit the file ./src/test/resources/Test_Suites/Test_Cucumber_Report.xml.
+ The browser can be selected, editing the parameter "myBrowser". You can select between "chrome", "firefox" and "internet explorer". 
+ There is not support yet for Safari or mobile devices browsers in this version of the project.
+ 
+ You can select to execute the browser in a Windows or a Linux system using the parameter "isDebug". If this is set to "Yes", the code will use the Windows version of the webdrivers included in the project.
+ If it is set to "No", it will use the Linux version of those webdrivers.
+ -IMPORTANT NOTE-: There is not support for Internet Explorer in Linux environment.
+
+-5 Manteiners
+------------------
+The code has been written and maintained by carlos.torrejn@yahoo.es
+ 
+ 
+ 
+ 

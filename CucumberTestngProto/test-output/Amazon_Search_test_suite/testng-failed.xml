@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Amazon_Search_test_suite]">
+  <test name="Google_test(failed)">
+    <parameter name="isDebug" value="Yes"/>
+    <parameter name="myUserName" value="V3G_test@gmx.es"/>
+    <parameter name="myBrowser" value="chrome"/>
+    <parameter name="myPassword" value="Hello123"/>
+    <classes>
+      <class name="runners.TestRunnerTestNg">
+        <methods>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setUpClass"/>
+          <include name="setUpCucumber"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="tearApp"/>
+        </methods>
+      </class> <!-- runners.TestRunnerTestNg -->
+    </classes>
+  </test> <!-- Google_test(failed) -->
+</suite> <!-- Failed suite [Amazon_Search_test_suite] -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  -->
+<suite name="Amazon_Search_test_suite">
+    <test name="Google_test">
+        <parameter name="isDebug" value="Yes"/>
+        <parameter name="myBrowser" value="chrome"/>
+		<parameter name="myUserName" value="V3G_test@gmx.es"/>
+		<parameter name='myPassword' value='Hello123'/>
+		
+        <classes>
+             <class name="runners.TestRunnerTestNg"></class>
+        </classes>
+    </test>
+</suite>
