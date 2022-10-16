@@ -4,8 +4,8 @@
     <test name="Google_test">
         <parameter name="myBrowser" value="chrome"/>
         <parameter name="isDebug" value="Yes"/>
-		<parameter name="myUserName" value="V3G_test@gmx.es"/>
-		<parameter name='myPassword' value='Hello123'/>
+		<parameter name="myUserName" value=""/>
+		<parameter name='myPassword' value=''/>
 		
         <classes>
              <class name="test_classes.Functional_tests">
